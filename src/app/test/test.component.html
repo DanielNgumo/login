@@ -1,0 +1,34 @@
+<br>
+
+
+<div [ngClass]="" *ngIf="isValid">
+    <h1>
+        Date is {{dateObject | date:'M/d/yy'}}<br>
+        name is {{name| lowercase}}<br>
+        Time is {{timeObject | date:'hh:mm a'}}
+    </h1>
+</div>
+
+<div [ngClass]="{'text-green': quantity>1000, 'text-red': quantity<1000}">
+    quatity is {{quantity}}
+</div>
+
+<button type="button" (click)="update($event,'Ngumo')">Update</button>
+<button type="button" (click)="updated()">Update</button>
+
+<button (click)="quantity1" [ngClass]="{'bcg-blue':wquantity>1000, 'bcg-red':wquatity<1000}"></button>
+
+<input (keyup)="saved($event)" type="text">
+
+<input (keydown.code.shiftleft.altleft.keyt)="onKeydown($event)" />
+
+
+<button id="smile" (mouseover)="showImage=true" (mouseout)="showImage=false">Hover me</button>
+
+
+<img *ngIf="showImage" src="../../assets/image/smile.jpg
+    " alt="my own image">
+<div class="image-box">
+    <img src="../../assets/image/smile.jpg
+    " alt="my own image">
+</div>
